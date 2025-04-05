@@ -319,11 +319,15 @@ if __name__ == "__main__":
     print("\nQuestion 2a: LBHA vs Market Analysis")
     if strategy_results['LBHA']['Statistics']['Sharpe Ratio'] > market_stats['Sharpe Ratio']:
         print("LBHA strategy outperforms the market in terms of Sharpe ratio.")
+        print("This indicates superior risk-adjusted returns, meaning the strategy generates")
+        print("higher returns per unit of risk taken compared to the market portfolio.")
     else:
         print("LBHA strategy underperforms the market in terms of Sharpe ratio.")
     
     if strategy_results['LBHA']['CAPM']['Alpha'] > 0 and strategy_results['LBHA']['CAPM']['Alpha Significant']:
         print("LBHA strategy generates positive and statistically significant alpha.")
+        print("This suggests the strategy has true skill in generating excess returns")
+        print("beyond what would be expected given its market risk exposure.")
     else:
         print("LBHA strategy does not generate statistically significant alpha.")
     
@@ -331,6 +335,15 @@ if __name__ == "__main__":
     print("\nQuestion 2b: LSA Analysis")
     if strategy_results['LSA']['CAPM']['Alpha'] > 0 and strategy_results['LSA']['CAPM']['Alpha Significant']:
         print("LSA strategy generates positive and statistically significant alpha.")
+        print("Client concerns might include:")
+        print("1. The strategy's late start might indicate it's a recent phenomenon")
+        print("2. The alpha might not persist in the future")
+        print("3. The strategy might be data-mined or overfitted")
+        print("To allay these concerns:")
+        print("1. Show robustness across different market conditions")
+        print("2. Demonstrate economic rationale for the strategy")
+        print("3. Present out-of-sample performance data")
+        print("4. Explain the strategy's risk management framework")
     else:
         print("LSA strategy does not generate statistically significant alpha.")
     
@@ -338,6 +351,14 @@ if __name__ == "__main__":
     print("\nQuestion 2c: TA Analysis")
     if strategy_results['TA']['CAPM']['Alpha'] > 0 and strategy_results['TA']['CAPM']['Alpha Significant']:
         print("TA strategy generates positive and statistically significant alpha.")
+        print("Investors might be interested in this strategy because:")
+        print("1. It demonstrates consistent alpha generation")
+        print("2. The tapering nature suggests risk management")
+        print("3. It may provide diversification benefits")
+        print("However, investors might be cautious because:")
+        print("1. The tapering could indicate diminishing returns")
+        print("2. The strategy might have capacity constraints")
+        print("3. The alpha might be harder to maintain as it tapers")
     else:
         print("TA strategy does not generate statistically significant alpha.")
     
@@ -347,13 +368,21 @@ if __name__ == "__main__":
         print("HV strategy has a higher Sharpe ratio than LV strategy.")
     else:
         print("LV strategy has a higher Sharpe ratio than HV strategy.")
+        print("A client would likely prefer the LV strategy because:")
+        print("1. Higher risk-adjusted returns (Sharpe ratio)")
+        print("2. Lower volatility means more predictable returns")
+        print("3. Better downside protection in market downturns")
+        print("4. More suitable for risk-averse investors")
+        print("5. Easier to incorporate into a diversified portfolio")
     
-    # Question 2e: NA Strategy Analysis
-    print("\nQuestion 2e: NA Strategy Analysis")
-    if strategy_results['NA']['CAPM']['Alpha'] < 0 and strategy_results['NA']['CAPM']['Alpha Significant']:
-        print("NA strategy generates negative and statistically significant alpha.")
-    else:
-        print("NA strategy does not generate statistically significant negative alpha.")
+    # Question 2e: Discussion on negative alpha strategy
+    print("\nQuestion 2e: Discussion on Negative Alpha Strategy")
+    print("A negative alpha strategy is not necessarily worthless because:")
+    print("1. It can be used as a hedge against other strategies in a portfolio")
+    print("2. The negative alpha might be compensated by other factors not captured in the CAPM")
+    print("3. It could be valuable for market makers or arbitrageurs who need to take the other side of trades")
+    print("4. The strategy might be profitable in specific market conditions or time periods")
+    print("5. It could be used to reduce portfolio risk or create market-neutral positions")
     
     # Question 2f: LB vs HB Comparison
     print("\nQuestion 2f: LB vs HB Comparison")
@@ -372,6 +401,24 @@ if __name__ == "__main__":
             print("LB manager is better due to higher risk-adjusted returns (Sharpe ratio).")
         else:
             print("HB manager is better due to higher risk-adjusted returns (Sharpe ratio).")
+    
+    # Question 2f: Discussion on LB vs HB manager comparison
+    print("\nFurther Discussion to be a bit more subjective:")
+    print("The 'better' manager depends on the investment objectives:")
+    print("1. The LB (low beta) manager is better for investors seeking:")
+    print("   - Pure alpha generation")
+    print("   - Lower market risk exposure")
+    print("   - More consistent returns")
+    print("   - Better risk-adjusted performance")
+    print("2. The HB (high beta) manager is better for investors seeking:")
+    print("   - Higher absolute returns in bull markets")
+    print("   - Market-like returns with potential alpha")
+    print("   - Higher total return potential")
+    print("3. However, the LB manager is generally considered 'better' because:")
+    print("   - Beta can be obtained cheaply through index funds")
+    print("   - True skill is measured by alpha generation")
+    print("   - Lower beta strategies are more valuable in diversified portfolios")
+    print("   - They provide better risk-adjusted returns")
     
     # Question 3: Fees Analysis
     
